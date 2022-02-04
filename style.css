@@ -1,0 +1,308 @@
+@keyframes shadow-pop-bl {
+  0% {
+    box-shadow: 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white;
+    transform: translateX(0) translateY(0);
+  }
+  100% {
+    box-shadow: -1px 1px white, -2px 2px white, -3px 3px white, -4px 4px white, -5px 5px white, -6px 6px white, -7px 7px white, -8px 8px white;
+    transform: translateX(8px) translateY(-8px);
+  }
+}
+
+
+body {
+  width: 100%;
+  height: 100vh;
+  margin: 0 auto;
+}
+
+#header {
+  background-color: pink;
+  position: fixed;
+  width: 25%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+#logo {
+  color: white;
+  font-size: 50px;
+  text-align: center;
+  margin: 20px;
+  font-family: 'Lobster', cursive;
+}
+
+#team>div, #position>div {
+  width: 100%;
+  color: white;
+  text-align: center;
+  font-size: 18px;
+  
+  margin-top: 40px;
+  font-family: 'Anton', sans-serif;
+}
+
+#team>ul, #position>ul {
+  list-style: none;
+}
+
+#team li, #position li {
+  padding: 5px;
+  border: 2px;
+  font-size: 17px;
+  font-family: 'Balsamiq Sans', cursive;
+  color: black;
+}
+
+#main {
+  width: 75%;
+  height: 1100px;
+  margin-left: 25%;
+  background-color: powderblue;
+}
+
+#main input {
+  width: 600px;
+  height: 40px;
+  border: 0px;
+}
+
+#Main {
+  width: 75%;
+  height: 1000px;
+  margin-left: 25%;
+  background-color: rgb(200, 228, 231);
+  display: block;
+  justify-content: center;
+}
+
+
+.title {
+  text-align: center;
+  font-size: 40px;
+  color: black;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  font-family: 'Patua One', cursive;
+}
+
+.pictures {
+  width: 100%;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 50px;
+  margin-top: 40px;
+}
+
+.pic {
+  display: block;
+  margin: 0 auto;
+  width: 640px;
+  height: auto;
+  padding-bottom: 30px;
+}
+
+.noPic {
+  background-color: transparent;
+  color: gray;
+}
+
+.pictures span {
+  background-color: transparent;
+  text-align: center;
+  border-radius: 50%;
+  padding: 10px 20px;
+  top: 50%;
+  font-size: 1.3em;
+}
+
+.pictures>span:first-child {
+  margin-left: 70px;
+}
+
+.pictures>span:last-child {
+  margin-right: 70px;
+}
+
+.yesPic:hover {
+   background-color: rgba(128, 128, 128, 0.11); 
+}
+
+.prev {
+  left: 10px;
+}
+
+.yesPic.prev:hover {
+  transform: translateX(-10px);
+}
+
+.next {
+  right: 10px;
+}
+
+.yesPic.next:hover {
+  transform: translateX(10px);
+}
+
+.yesPic {
+  background-color: transparent;
+  color: black;
+}
+
+.yesPic:hover {
+  cursor: pointer;
+}
+
+
+.members {
+  color: white;
+  font-size: 15px;
+  margin-left: 30px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid white;
+}
+
+.mempicbox {
+  margin: 40px;
+  display: flex;
+  justify-content: space-around;
+  align-self: center;
+}
+
+.mempic {
+  width: 12%;
+  height: auto;
+}
+
+#menu1 {
+  width: 75%;
+  height: 100%;
+  margin-left: 25%;
+  background-color: violet;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+#menu2 {
+  width: 75%;
+  height: 100%;
+  margin-left: 25%;
+  background-color: yellowgreen;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.teamname:hover, .positionname:hover {
+  color: white;
+}
+
+#logo:hover, .teamname:hover, .positionname:hover {
+  cursor: pointer;
+}
+
+.mempic:hover {
+  animation: shadow-pop-bl 0.3s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+  cursor: pointer;
+}
+
+#container {
+  width: 100%;
+  height: 400px;
+  display: none;
+  background-color: rgb(200, 228, 231);
+}
+
+.meminfo {
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.detail-txt * {
+  font-family: 'Jua', sans-serif;
+}
+
+.detail-img {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px;
+}
+
+.detail-txt {
+  padding-top: 50px;
+  padding-right: 50px;
+}
+
+.detail-img>img {
+  width: 200px;
+  height: auto;
+}
+
+#detail-name {
+  font-size: 33px;
+}
+
+.detail-birth>span, .detail-audition>span, .detail-sns>span, .detail-position{
+  font-size: 20px;
+}
+
+#detail-clip, #detail-insta, #detail-youtube {
+  display: inline-block;
+  width: 20px;
+  height: auto;
+}
+
+.detail-txt>div {
+  margin-bottom: 15px;
+}
+
+#detail-up {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 30px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+a {
+  text-decoration-line: none;
+}
+
+#top6 {
+  font-family: 'Alfa Slab One', cursive;
+  font-size: 40px;
+  width: 100%;
+  text-align: center;
+  padding: 30px;
+}
+
+#maincontainer {
+  display: grid;
+  margin: 20px;
+  grid-template-columns: 350px 350px;
+  grid-template-rows: 300px 300px 300px;
+  gap: 15px;
+}
+
+#toflex {
+  display: flex;
+  justify-content: center;
+}
+
+.maingroup {
+  font-family: 'Patua One', cursive;
+  font-size: 30px;
+  text-align: center;
+}
+
+.mainimg {
+  width: 350px;
+  height: auto;
+}
